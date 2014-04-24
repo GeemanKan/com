@@ -1,4 +1,4 @@
-package GKScripts.GKFlax.framework;
+package GKScripts.GKFlax.data;
 
 import org.powerbot.script.Random;
 import org.powerbot.script.Tile;

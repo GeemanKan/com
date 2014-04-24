@@ -4,9 +4,9 @@ import org.powerbot.script.rt6.*;
 
 import GKScripts.GKFlax.data.Ids;
 import GKScripts.GKFlax.data.Tiles;
+import GKScripts.GKFlax.data.Methods.*;
+import GKScripts.GKFlax.data.Methods.Objects;
 import GKScripts.GKFlax.framework.Task;
-import GKScripts.GKFlax.framework.Methods.*;
-import GKScripts.GKFlax.framework.Methods.Objects;
 
 public class Interact extends Task {
 

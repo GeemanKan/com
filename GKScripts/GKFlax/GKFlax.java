@@ -13,8 +13,8 @@ import org.powerbot.script.Random;
 import org.powerbot.script.rt4.Skills;
 import org.powerbot.script.rt6.ClientContext;
 
-import GKScripts.GKFlax.framework.Methods;
-import GKScripts.GKFlax.framework.Methods.Paint;
+import GKScripts.GKFlax.data.Methods;
+import GKScripts.GKFlax.data.Methods.Paint;
 import GKScripts.GKFlax.framework.Task;
 import GKScripts.GKFlax.tasks.*;
 import GKScripts.GKFlax.tasks.spin.*;

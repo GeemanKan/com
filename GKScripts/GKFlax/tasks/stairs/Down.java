@@ -3,10 +3,10 @@ package GKScripts.GKFlax.tasks.stairs;
 import org.powerbot.script.rt6.ClientContext;
 
 import GKScripts.GKFlax.data.Ids;
+import GKScripts.GKFlax.data.Methods.Objects;
 import GKScripts.GKFlax.data.Tiles;
+import GKScripts.GKFlax.data.Methods.Location;
 import GKScripts.GKFlax.framework.Task;
-import GKScripts.GKFlax.framework.Methods.Location;
-import GKScripts.GKFlax.framework.Methods.Objects;
 
 public class Down extends Task {
 

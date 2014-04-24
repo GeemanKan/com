@@ -4,8 +4,8 @@ import org.powerbot.script.rt6.ClientContext;
 
 import GKScripts.GKFlax.data.Ids;
 import GKScripts.GKFlax.data.Tiles;
+import GKScripts.GKFlax.data.Methods.*;
 import GKScripts.GKFlax.framework.Task;
-import GKScripts.GKFlax.framework.Methods.*;
 
 public class Up extends Task {
 
