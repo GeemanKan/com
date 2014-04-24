@@ -2,10 +2,10 @@ package GKScripts.GKFlax.tasks.stairs;
 
 import org.powerbot.script.rt6.ClientContext;
 
+import GKScripts.GKFlax.data.Ids;
+import GKScripts.GKFlax.data.Tiles;
 import GKScripts.GKFlax.framework.Task;
 import GKScripts.GKFlax.framework.Methods.*;
-import GKScripts.GKFlax.framework.*;
-import GKScripts.GKFlax.framework.Data.*;
 
 public class Up extends Task {
 
@@ -17,7 +17,7 @@ public class Up extends Task {
 		if(Location.current() == Location.LOW_FLOOR){
 			return true;
 		}
-		return Location.current() == Location.MID_FLOOR && !Inventory.contains(Ids.FLAX);
+		return Location.current() == Location.MID_FLOOR && ctx.backpack.select().id(Ids.FLAX).count() == 0;
 	}
 
 	public void run() {

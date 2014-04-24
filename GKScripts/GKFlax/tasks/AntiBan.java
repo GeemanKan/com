@@ -5,8 +5,8 @@ import org.powerbot.script.Random;
 import org.powerbot.script.rt6.ClientContext;
 import org.powerbot.script.rt6.Npc;
 
+import GKScripts.GKFlax.data.Animations;
 import GKScripts.GKFlax.framework.Task;
-import GKScripts.GKFlax.framework.Data.Animations;
 
 public class AntiBan extends Task {
 

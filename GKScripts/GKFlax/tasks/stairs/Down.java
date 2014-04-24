@@ -2,12 +2,11 @@ package GKScripts.GKFlax.tasks.stairs;
 
 import org.powerbot.script.rt6.ClientContext;
 
+import GKScripts.GKFlax.data.Ids;
+import GKScripts.GKFlax.data.Tiles;
 import GKScripts.GKFlax.framework.Task;
-import GKScripts.GKFlax.framework.Methods.Inventory;
 import GKScripts.GKFlax.framework.Methods.Location;
 import GKScripts.GKFlax.framework.Methods.Objects;
-import GKScripts.GKFlax.framework.Data.Ids;
-import GKScripts.GKFlax.framework.Data.Tiles;
 
 public class Down extends Task {
 
@@ -16,7 +15,7 @@ public class Down extends Task {
 	}
 
 	public boolean ready() {
-		return Inventory.contains(Ids.FLAX)
+		return ctx.backpack.select().id(Ids.FLAX).count() > 0
 				&& Location.current() == Location.TOP_FLOOR && !ctx.bank.opened();
 	}
 

@@ -13,7 +13,6 @@ import org.powerbot.script.Random;
 import org.powerbot.script.rt4.Skills;
 import org.powerbot.script.rt6.ClientContext;
 
-import GKScripts.GKFlax.framework.Data.User;
 import GKScripts.GKFlax.framework.Methods;
 import GKScripts.GKFlax.framework.Methods.Paint;
 import GKScripts.GKFlax.framework.Task;
@@ -28,10 +27,12 @@ public class GKFlax extends PollingScript<ClientContext> implements PaintListene
 	
 	private BufferedImage paintImage = null;
 	
+	public final int START_XP = ctx.skills.experience(Skills.CRAFTING);;
+	public final int START_LVL = ctx.skills.level(Skills.CRAFTING);
+	
 	public void start(){
 		
 		new Methods(ctx);
-	
 		
 		tasks.add(new Bank(ctx));
 		tasks.add(new Up(ctx));
@@ -41,9 +42,6 @@ public class GKFlax extends PollingScript<ClientContext> implements PaintListene
 		tasks.add(new AntiBan(ctx));
 
 		paintImage = downloadImage("http://i.imgur.com/t2OwMl2.png");
-		
-		User.START_XP = ctx.skills.experience(Skills.CRAFTING);
-		User.START_LVL = ctx.skills.level(Skills.CRAFTING);
 		
 	}
 	
@@ -63,8 +61,8 @@ public class GKFlax extends PollingScript<ClientContext> implements PaintListene
 
 	public void repaint(Graphics g) {
 		
-		int xp = ctx.skills.experience(Skills.CRAFTING) - User.START_XP;
-		int lvl = ctx.skills.level(Skills.CRAFTING) - User.START_LVL;
+		int xp = ctx.skills.experience(Skills.CRAFTING) - START_XP;
+		int lvl = ctx.skills.level(Skills.CRAFTING) - START_LVL;
 		
 		String lvlText = "";
 		

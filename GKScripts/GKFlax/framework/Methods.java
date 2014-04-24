@@ -1,11 +1,8 @@
 package GKScripts.GKFlax.framework;
 
-import org.powerbot.script.Locatable;
 import org.powerbot.script.Random;
 import org.powerbot.script.Tile;
 import org.powerbot.script.rt6.*;
-
-import GKScripts.GKFlax.framework.Data.Tiles;
 
 public class Methods extends ClientAccessor {
 
@@ -16,7 +13,6 @@ public class Methods extends ClientAccessor {
 		ctx = c;
 	}
 	
-
 	public static class Location {
 
 		public static final int TOP_FLOOR = 2;
@@ -35,7 +31,7 @@ public class Methods extends ClientAccessor {
 
 			GameObject o = ctx.objects.select().id(id).nearest().first().poll();
 
-			if (o != null) {
+			if (o.valid()) {
 				if (o.inViewport()) {
 					if (o.interact(action)) {
 						try {
@@ -60,17 +56,6 @@ public class Methods extends ClientAccessor {
 		
 	}
 
-	public static class Inventory {
-
-		public static boolean contains(int i) {
-			return ctx.backpack.select().id(i).count() > 0;
-		}
-
-		public static boolean empty() {
-			return ctx.backpack.select().isEmpty();
-		}
-
-	}
 
 	public static class Paint {
 

@@ -7,17 +7,17 @@ import GKScripts.GKFlax.framework.Task;
 
 public class Widget extends Task {
 
+	Component c = ctx.widgets.component(1370, 38);
+	
 	public Widget(ClientContext ctx) {
 		super(ctx);
 	}
 
 	public boolean ready() {
-		Component c = ctx.widgets.component(1370, 38);
 		return c.valid();
 	}
 
 	public void run() {
-		Component c = ctx.widgets.component(1370, 38);
 		c.click();
 	}
 
