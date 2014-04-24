@@ -20,7 +20,7 @@ import GKScripts.GKFlax.tasks.*;
 import GKScripts.GKFlax.tasks.spin.*;
 import GKScripts.GKFlax.tasks.stairs.*;
 
-@Manifest(name = "GKScripts.GKFlax", description = "Spins flax at lumbridge for huge profit")
+@Manifest(name = "GKFlax", description = "Spins flax at lumbridge for huge profit")
 public class GKFlax extends PollingScript<ClientContext> implements PaintListener {
 
 	private List<Task> tasks = new ArrayList<Task>();
