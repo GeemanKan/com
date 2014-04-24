@@ -21,7 +21,11 @@ public class Up extends Task {
 	}
 
 	public void run() {
-		Objects.interact(Ids.STAIRS_UP, "Climb-up", Tiles.STAIRS);
+		if(Location.current() == Location.MID_FLOOR){
+			Objects.interact(Ids.STAIRS_UP, "Climb-up", Tiles.STAIRS);
+		} else {
+			Objects.interact(Ids.STAIRS_UP_2, "Climb-up", Tiles.STAIRS);
+		}
 	}
 
 }
